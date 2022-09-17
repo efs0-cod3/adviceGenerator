@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/efs0-cod3/adviceGenerator.git/static/css/main.dcf074e6.css",
-    "main.js": "/efs0-cod3/adviceGenerator.git/static/js/main.296494e3.js",
-    "index.html": "/efs0-cod3/adviceGenerator.git/index.html",
-    "static/media/icon-dice.svg": "/efs0-cod3/adviceGenerator.git/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
-    "static/media/pattern-divider-desktop.svg": "/efs0-cod3/adviceGenerator.git/static/media/pattern-divider-desktop.ed9685263f6b47d21c88.svg",
-    "static/media/pattern-divider-mobile.svg": "/efs0-cod3/adviceGenerator.git/static/media/pattern-divider-mobile.aca38726412164df099c.svg",
-    "main.dcf074e6.css.map": "/efs0-cod3/adviceGenerator.git/static/css/main.dcf074e6.css.map",
-    "main.296494e3.js.map": "/efs0-cod3/adviceGenerator.git/static/js/main.296494e3.js.map"
+    "main.css": "/efs0-cod3/adviceGenerator/static/css/main.5e57154f.css",
+    "main.js": "/efs0-cod3/adviceGenerator/static/js/main.65978bf2.js",
+    "index.html": "/efs0-cod3/adviceGenerator/index.html",
+    "static/media/icon-dice.svg": "/efs0-cod3/adviceGenerator/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
+    "static/media/pattern-divider-desktop.svg": "/efs0-cod3/adviceGenerator/static/media/pattern-divider-desktop.ed9685263f6b47d21c88.svg",
+    "static/media/pattern-divider-mobile.svg": "/efs0-cod3/adviceGenerator/static/media/pattern-divider-mobile.aca38726412164df099c.svg",
+    "main.5e57154f.css.map": "/efs0-cod3/adviceGenerator/static/css/main.5e57154f.css.map",
+    "main.65978bf2.js.map": "/efs0-cod3/adviceGenerator/static/js/main.65978bf2.js.map"
   },
   "entrypoints": [
-    "static/css/main.dcf074e6.css",
-    "static/js/main.296494e3.js"
+    "static/css/main.5e57154f.css",
+    "static/js/main.65978bf2.js"
   ]
 }
