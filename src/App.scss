@@ -1,0 +1,168 @@
+$mDivider: "./images/pattern-divider-mobile.svg";
+$dDivider: "./images/pattern-divider-desktop.svg";
+
+// breapoints
+$breakpoint: 600px;
+// colors
+// ### Primary
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+// #Neutra
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+
+body {
+  background-color: $DarkBlue;
+  text-align: center;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+}
+
+.loading{
+  color: $NeonGreen;
+}
+
+.container {
+  position: relative;
+  width: 343px;
+  background-color: $DarkGrayishBlue;
+  border-radius: 10px;
+  padding: 42px 25px 0;
+  text-align: center;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.divider {
+  background-image: url($mDivider);
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h3 {
+  color: $NeonGreen;
+  margin-top: 0;
+  margin-bottom: 8px;
+  letter-spacing: 4px;
+}
+
+h1 {
+  margin-top: 28px;
+margin-bottom: 30px;
+  color: $LightCyan;
+  word-wrap: break-word;
+  font-weight: 800;
+}
+
+.diceContainer {
+  display: flex;
+  position: relative;
+  left: 141px;
+  top: 31px;
+  background-color: hsl(150deg, 100%, 66%);
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.diceContainer:hover {
+  box-shadow: 0px 0px 15px 2px $NeonGreen;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 0px;
+}
+
+@media (min-width: $breakpoint) {
+  .container{
+    padding: 50px 42px 0px;
+    width: 540px;
+  }
+  .divider {
+    background-image: url($dDivider);
+  }
+  .diceContainer{
+    left: 238px;
+    top: 31px; 
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+footer{
+  color: $LightCyan;
+}
+
+footer a{
+  text-decoration: none;
+  color: $NeonGreen;
+}
+
+// ========== dot windmill =========
+
+.dot-windmill {
+  position: relative;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(150, 100%, 66%);
+  transform-origin: 5px 15px;
+  animation: dotWindmill 2s infinite linear;
+}
+
+.dot-windmill::before, .dot-windmill::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+.dot-windmill::before {
+  left: -8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(150, 100%, 66%);
+}
+
+.dot-windmill::after {
+  left: 8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: hsl(150, 100%, 66%);
+  color: hsl(150, 100%, 66%);
+}
+
+@keyframes dotWindmill {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(720deg) translate3d(0, 0, 0);
+  }
+}
