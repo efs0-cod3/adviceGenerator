@@ -26,10 +26,10 @@ if(isLoading){
     <main>
     {/* <h3 className="loading">Loading...</h3>
      */}
-     <div class="col-3">
-        <div class="snippet" data-title=".dot-windmill">
-          <div class="stage">
-            <div class="dot-windmill"></div>
+     <div className="col-3">
+        <div className="snippet" data-title=".dot-windmill">
+          <div className="stage">
+            <div className="dot-windmill"></div>
           </div>
         </div>
       </div>
