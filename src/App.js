@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 function App() {
 
-  const [isLoading, setLoading] = useState(true);
+
   const [ advice, setAdvice ] = useState('')
 
   const getAdvice = async() => {
@@ -13,7 +13,6 @@ function App() {
       const res = await fetch(`https://api.adviceslip.com/advice/${Math.round(Math.random()*224)}`)
       const data = await res.json()
       setAdvice(data.slip)
-      setLoading(false)
     } catch (error) {
       console.log(error);
     }
@@ -21,21 +20,7 @@ function App() {
 
   useEffect(() => getAdvice, [])
 
-if(isLoading){
-  return(
-    <main>
-    {/* <h3 className="loading">Loading...</h3>
-     */}
-     <div className="col-3">
-        <div className="snippet" data-title=".dot-windmill">
-          <div className="stage">
-            <div className="dot-windmill"></div>
-          </div>
-        </div>
-      </div>
-  </main>
-  )
-}
+
 
   return (
     <div className="App">
