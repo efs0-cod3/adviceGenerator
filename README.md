@@ -54,22 +54,26 @@ The workflow while building with react is easy but you gorra know your ways arro
 This fetch gave me a little hedache because the way that i was used to fect data wasnt working so i had to take this aproach. i tried axios and plain fetch but the winner was this try/catch.
 
 <code>
-  const [isLoading, setIsLoading] = useState(false);
-  const [ advice, setAdvice ] = useState('')
+  
+    const [isLoading, setIsLoading] = useState(false);
+  
+    const [ advice, setAdvice ] = useState('')
 
-  const getAdvice = async() => {
-    setIsLoading(true)
-    try {
-      const res = await fetch(`https://api.adviceslip.com/advice/${Math.round(Math.random()*224)}`)
-      const data = await res.json()
-      setAdvice(data.slip)
-      setIsLoading(false)
-    } catch (error) {
-      console.log(error);
+    const getAdvice = async() => {
+      setIsLoading(true)
+
+      try {
+        const res = await fetch(`https://api.adviceslip.com/advice/${Math.round(Math.random()*224)}`)
+        const data = await res.json()
+        setAdvice(data.slip)
+        setIsLoading(false)
+
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
-
-  useEffect(() => getAdvice(), [setAdvice])
+    useEffect(() => getAdvice(), [setAdvice])
+  
 </code>
 
 Still have a lot to learn and in the comming projects ill be sharing my experiences.
