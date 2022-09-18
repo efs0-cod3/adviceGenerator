@@ -5,22 +5,36 @@ import { useEffect, useState } from "react";
 
 function App() {
 
-
+  const [isLoading, setIsLoading] = useState(false);
   const [ advice, setAdvice ] = useState('')
 
   const getAdvice = async() => {
+    setIsLoading(true)
     try {
       const res = await fetch(`https://api.adviceslip.com/advice/${Math.round(Math.random()*224)}`)
       const data = await res.json()
       setAdvice(data.slip)
+      setIsLoading(false)
     } catch (error) {
       console.log(error);
     }
   }
 
-  useEffect(() => getAdvice, [])
+  useEffect(() => getAdvice(), [setAdvice])
 
-
+if(isLoading){
+  return(
+    <main>
+     <div className="col-3">
+        <div className="snippet" data-title=".dot-windmill">
+          <div className="stage">
+            <div className="dot-windmill"></div>
+          </div>
+        </div>
+      </div>
+  </main>
+  )
+}
 
   return (
     <div className="App">
